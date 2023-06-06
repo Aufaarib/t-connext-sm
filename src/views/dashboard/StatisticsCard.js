@@ -25,18 +25,18 @@ const salesData = [
   {
     stats: '12.5k',
     title: 'Customers',
-    color: 'success',
+    color: 'primary',
     icon: <AccountOutline sx={{ fontSize: '1.75rem' }} />
   },
   {
     stats: '1.54k',
-    color: 'warning',
+    color: 'primary',
     title: 'Products',
     icon: <CellphoneLink sx={{ fontSize: '1.75rem' }} />
   },
   {
     stats: '$88k',
-    color: 'info',
+    color: 'primary',
     title: 'Revenue',
     icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
   }

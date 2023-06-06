@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { addOne, subOne, addSome, subSome, reset } from '../slice'
+import { addOne, subOne, addSome, subSome, reset } from '../../redux/slice'
 
 const example = () => {
   const dispatch = useDispatch()

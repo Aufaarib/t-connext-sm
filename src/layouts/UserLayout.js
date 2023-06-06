@@ -32,17 +32,25 @@ const UserLayout = ({ children }) => {
 
   // const UpgradeToProImg = () => {
   //   return (
-  //     <Box sx={{ mx: 'auto' }}>
-  //       <a
-  //         target='_blank'
-  //         rel='noreferrer'
-  //         href='https://themeselection.com/products/materio-mui-react-nextjs-admin-template/'
-  //       >
-  //         <img width={230} alt='upgrade to premium' src={`/images/misc/upgrade-banner-${settings.mode}.png`} />
-  //       </a>
-  //     </Box>
+  // <Box sx={{ mx: 'auto' }}>
+  //   <a
+  //     target='_blank'
+  //     rel='noreferrer'
+  //     href='https://themeselection.com/products/materio-mui-react-nextjs-admin-template/'
+  //   >
+  //     <img width={230} alt='upgrade to premium' src={`/images/misc/upgrade-banner-${settings.mode}.png`} />
+  //   </a>
+  // </Box>
   //   )
   // }
+
+  const Version = () => {
+    return (
+      <Box sx={{ mx: 'auto' }}>
+        <a color='grey'>v1.0</a>
+      </Box>
+    )
+  }
 
   return (
     <VerticalLayout
@@ -50,12 +58,12 @@ const UserLayout = ({ children }) => {
       settings={settings}
       saveSettings={saveSettings}
       verticalNavItems={VerticalNavItems()} // Navigation Items
-      // afterVerticalNavMenuContent={UpgradeToProImg}
+      afterVerticalNavMenuContent={Version}
       verticalAppBarContent={(
         props // AppBar Content
       ) => (
         <VerticalAppBarContent
-          hidden={true}
+          hidden={hidden}
           settings={settings}
           saveSettings={saveSettings}
           toggleNavVisibility={props.toggleNavVisibility}
