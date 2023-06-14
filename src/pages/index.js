@@ -28,10 +28,14 @@ const Dashboard = () => {
   return (
     <ApexChartWrapper>
       <Grid container spacing={6}>
-        <Grid item xs={10} mb={6}>
-          <Typography variant='h5'>Dashboard</Typography>
+        {/* <Grid item xs={10} mb={6}>
+          <Typography variant='h5'>
+            <Link href='#' target='_blank'>
+              Dashboard
+            </Link>
+          </Typography>
           <Typography variant='body2'>Tables display sets of data. They can be fully customized</Typography>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} md={4}>
           <Trophy />
         </Grid>

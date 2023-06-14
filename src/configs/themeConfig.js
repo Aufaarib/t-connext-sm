@@ -1,9 +1,9 @@
 const themeConfig = {
   // ** Layout Configs
-  templateName: 'T-Connext' /* App Name */,
+  templateName: 'T-Connext | CMS' /* App Name */,
   themeColor: 'error',
   mode: 'light' /* light | dark */,
-  contentWidth: 'boxed' /* full | boxed */,
+  contentWidth: 'full' /* full | boxed */,
   // ** Routing Configs
   routingLoader: true /* true | false */,
   // ** Navigation (Menu) Configs

@@ -4,7 +4,7 @@ import axios from 'axios'
 // Define the async action using createAsyncThunk
 export const fetchData = createAsyncThunk('reducer/fetchData', async () => {
   try {
-    const response = await axios.get('https://63e1c25ff59c591411a61021.mockapi.io/nusa-list-cost-center')
+    const response = await axios.get('https://63e1c25ff59c591411a61021.mockapi.io/nusa-list-bank')
     return response.data
   } catch (error) {
     throw new Error('Error fetching data')

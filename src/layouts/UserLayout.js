@@ -46,8 +46,8 @@ const UserLayout = ({ children }) => {
 
   const Version = () => {
     return (
-      <Box sx={{ mx: 'auto' }}>
-        <a color='grey'>v1.0</a>
+      <Box sx={{ mx: 'auto', color: 'primary.dark' }}>
+        <a>v1.0</a>
       </Box>
     )
   }

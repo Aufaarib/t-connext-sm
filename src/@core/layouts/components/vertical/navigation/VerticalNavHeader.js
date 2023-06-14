@@ -51,9 +51,9 @@ const VerticalNavHeader = props => {
         <Link href='/' passHref>
           <StyledLink>
             <img src='/images/misc/tconnext.png' alt=''></img>
-            {/* <HeaderTitle variant='h6' sx={{ ml: 3 }}>
-              {themeConfig.templateName}
-            </HeaderTitle> */}
+            <HeaderTitle variant='h7' sx={{ ml: 1, mt: 3 }}>
+              CMS
+            </HeaderTitle>
           </StyledLink>
         </Link>
       )}

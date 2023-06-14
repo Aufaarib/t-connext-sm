@@ -23,7 +23,7 @@ const navigation = () => {
       path: '/account-settings'
     },
     {
-      title: 'Redux Test',
+      title: 'YT Player Test',
       icon: AlertCircleOutline,
       path: '/example'
     },
