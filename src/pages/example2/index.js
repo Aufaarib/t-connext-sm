@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux'
-import { fetchData } from '../../redux/reducer'
+import { fetchData } from 'src/actions/getApiAction'
+import { postApi } from 'src/actions/postApiAction'
 import { useSelector } from 'react-redux'
 // ** MUI Imports
 import Box from '@mui/material/Box'
@@ -16,27 +17,52 @@ import Magnify from 'mdi-material-ui/Magnify'
 import ModeToggler from 'src/@core/layouts/components/shared-components/ModeToggler'
 import UserDropdown from 'src/@core/layouts/components/shared-components/UserDropdown'
 import NotificationDropdown from 'src/@core/layouts/components/shared-components/NotificationDropdown'
+import { useState } from 'react'
 
 const Example2 = props => {
   // ** Props
-  const { hidden, settings, saveSettings, toggleNavVisibility } = props
-
-  const { title, subtitle, color, icon, stats, trend, trendNumber } = props
-  const data = useSelector(state => state.reducer)
+  const [namaBank, setNamaBank] = useState('')
+  const [nomorRekening, setNomorRekening] = useState('')
+  const [namaPemilik, setNamaPemilik] = useState('')
+  const [sts, setSts] = useState('error')
 
   const dispatch = useDispatch()
+  const getApi = useSelector(store => store.getApi.getApi)
 
   const handleClick = () => {
     dispatch(fetchData())
   }
 
+  const handlePost = () => {
+    const data = {
+      nama_bank: namaBank,
+      nomor_rekening: nomorRekening,
+      nama_pemilik: namaPemilik
+    }
+    dispatch(postApi(data))
+    setSts('success')
+  }
+
   return (
     <div>
+      <label>Nama Bank</label>
+      <input type='text' onChange={e => setNamaBank(e.target.value)}></input>
+      <br></br>
+      <label>Nomor Rekening</label>
+      <input type='number' onChange={e => setNomorRekening(e.target.value)}></input>
+      <br></br>
+      <label>Nama Pemilik</label>
+      <input type='text' onChange={e => setNamaPemilik(e.target.value)}></input>
+      <button onClick={handlePost}>Post Data</button>
+      <br></br>
+      <p>Posting status :</p>
+      {sts === 'success' && <h4>Berhasil</h4>}
+
       <button onClick={handleClick}>Fetch Data</button>
       <p>Response: </p>
-      {data ? (
+      {getApi ? (
         <Box sx={{ textAlign: 'center', display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center' }}>
-          {data.map(item => (
+          {getApi.map(item => (
             <Box
               sx={{
                 minWidth: '250px',

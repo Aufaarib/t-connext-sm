@@ -33,6 +33,11 @@ const navigation = () => {
       path: '/example2'
     },
     {
+      title: 'CRUD Page',
+      icon: AlertCircleOutline,
+      path: '/crud-page'
+    },
+    {
       sectionTitle: 'Pages'
     },
     {

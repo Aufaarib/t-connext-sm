@@ -14,7 +14,7 @@ const example = () => {
       <iframe
         width='100%'
         height='600'
-        src='https://www.youtube.com/embed/gL5Xr-0hOLI?start=1990&autoplay=1'
+        src='https://www.youtube.com/embed/atC56l_qYxs?start=2274&autoplay=1'
         title='YouTube video player'
         allow='autoplay'
         allowFullScreen
