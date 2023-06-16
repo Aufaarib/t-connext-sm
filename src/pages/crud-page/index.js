@@ -43,7 +43,7 @@ const CrudPage = props => {
 
   console.log(transformedItems.map(item => item.nama_bank))
 
-  console.log(deleteId)
+  // console.log(deleteId)
 
   useEffect(() => {
     dispatch(fetchData())
@@ -102,8 +102,7 @@ const CrudPage = props => {
   }
 
   const handleDelete = id => {
-    setDeleteId(id)
-    dispatch(deleteApi(deleteId))
+    dispatch(deleteApi(id))
     setSts('success')
   }
 

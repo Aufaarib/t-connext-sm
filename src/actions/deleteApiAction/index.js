@@ -13,9 +13,9 @@ export const removeSelectedProduct = id => {
 export const deleteApi = id => {
   return async dispatch => {
     try {
-      dispatch(removeSelectedProduct(+id)) //change string to number
+      dispatch(setDeleteApi(id)) //change string to number
 
-      await axios.delete(`https://63e1c25ff59c591411a61021.mockapi.io/nusa-list-bank/nusa-list-bank/${+id}`)
+      await axios.delete(`https://63e1c25ff59c591411a61021.mockapi.io/nusa-list-bank/${id}`)
     } catch (error) {
       // Handle the error here
       console.error('Error fetching data:', error)
